@@ -1,7 +1,11 @@
 #include <stdio.h>
 
-int main (void)
+/**
+ * Low level programming
+ * prints string using puts
+ */
+
+int main(void)
 {
-puts("Programming is like building a multilingual puzzle\n");
+puts("\"Programming is like building a multilingual puzzle");
 return 0;
-}
