@@ -7,10 +7,12 @@
 int main(void)
 {
 	char alphabet;
+	char upper = toupper(alphabet);
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		putchar(alphabet, toupper(alphabet));
+		putchar(alphabet);
+		putchar(upper);
 	}
 	putchar('\n');
 	return (0);
