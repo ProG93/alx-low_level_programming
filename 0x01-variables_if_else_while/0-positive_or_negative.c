@@ -16,7 +16,7 @@ if(n > 0)
 
 {
 
-printf("The number is positive\n");
+printf("is positive\n");
 
 }
 
@@ -24,7 +24,7 @@ else if(n < 0)
 
 {
 
-printf("The number is negative\n");
+printf("is negative\n");
 
 }
 
@@ -32,7 +32,7 @@ else
 
 {
 
-printf("The number is zero\n");
+printf("is zero\n");
 
 }
 
