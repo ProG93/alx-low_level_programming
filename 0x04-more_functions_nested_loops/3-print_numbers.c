@@ -6,16 +6,17 @@
  */
 void print_numbers(void)
 {
-	char num;
+	char n = 0;
 
-	while (num <= 9)
+	while (n <= 9)
 	{
-		if (num != 2 && num != 4)
+		if (n != 2 && n != 4)
 		{
-			_putchar('0' + num);
+			_putchar('0' + n);
 		}
+
 		n++;
 	}
-
 	_putchar('\n');
+
 }
