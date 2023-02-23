@@ -1,31 +1,42 @@
-#include <stdlib.h>
-
+ #include <stdio.h>
 /**
- * main - fizz buzz print it
- * Return: 0
+ * main - Fizz-Buzz test
+ *
+ * Return: void.
  */
+
 int main(void)
 {
-	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
 
-	for (i = 1; i <= 100; i++)
+	int i = 1;
+
+	while (i <= 100)
 	{
-		if (i == 100)
-			_putchar(b);
-		else if ((i % 3 == 0) && (i % 5 == 0))
-			_putchar(fb);
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
 		else if (i % 3 == 0)
-			_putchar(f);
+		{
+			printf("Fizz");
+		}
 		else if (i % 5 == 0)
-			_putchar(b);
+		{
+			printf("Buzz");
+		}
 		else
-			_putchar(i);
+		{
+			printf("%i", i);
+		}
 
+		if (i != 100)
+		{
+			putchar(' ');
+		}
+
+		i++;
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
-}
 
+}
