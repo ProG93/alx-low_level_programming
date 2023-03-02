@@ -1,32 +1,32 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *cap_string - capitilize all the words of the string.
- * @str: - string
- * Return: string
+ * cap_string - capitalizes most of the words in a string.
+ * @str: analized string.
+ *
+ * Return: String with all words capitalized.
  */
-
 char *cap_string(char *str)
 {
-	int i, k;
+	int i, j;
 	int a[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	i = 0;
-	while (str[i] != '\0')
+	while (*(str + i) != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (*(str + i) >= 'a' && *(str + i) <= 'z')
 		{
 			if (i == 0)
 			{
-				str[i] = str[i] - 32;
+				*(str + i) = *(str + i) - 32;
 			}
 			else
 			{
-				for (k = 0; k <= 12; k++)
+				for (j = 0; j <= 12; j++)
 				{
-					if (a[k] == str[i])
+					if (a[j] == *(str + i - 1))
 					{
-						str[i] = str[i] - 32;
+						*(str + i) = *(str + i) - 32;
 					}
 				}
 			}
