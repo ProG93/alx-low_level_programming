@@ -25,6 +25,5 @@ void print_diagsums(int *a, int size)
 		d++;
 		c++;
 	}
-	_putchar(f1, f2);
-	_putchar('\n');
+	printf("%ld, %ld\n", d1, d2);
 }
