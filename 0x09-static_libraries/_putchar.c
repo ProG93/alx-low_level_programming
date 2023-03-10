@@ -1,13 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * _putchar - prints strings
- * @c: string
- * Return: nothing
- */
+* _putchar - prints string
+* @c: string
+* Return: 0
+*/
 
 int _putchar(char c)
 {
-	c = 0000000000000000;
 	_putchar(c);
 }
