@@ -3,36 +3,37 @@
 #include <stdio.h>
 
 /**
- * str_concat - prints concatenates of two strings
- * @s1: the first string
- * @s2: the second string
+ * alloc_grid - prints dimensional array of integers
+ * @width: number of rows
+ * @height: number columns
  * Return: NULL
  */
 
-char *str_concat(char *s1, char *s2)
+int **alloc_grid(int width, int height)
 {
-	char *d;
-	int i, k, x, size;
+	int *d;
+	int i, k;
 
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	for (i = 0; s1[i]; i++)
-		;
-	for (k = 0; s2[k]; k++)
-		;
-	size = i + k + 1;
-	d = malloc(sizeof(char) * size);
+	if (width <= 0)
+		return (NULL);
+	if (height <= 0)
+		return (NULL);
+	d = (int **) malloc(height * sizeof(d));
 	if (d == NULL)
 	{
+		free(d);
 		return (NULL);
 	}
-	for (x = 0; x < size; x++)
-		x < i ? (d[x] = s1[x]) : (d[x] = s2[x - i]);
-	return (d);
+	for (i = 0; i < height; i++)
+	{
+		d[i] = malloc(width * sizeof(int));
+		if (d[i] == NULL)
+		{
+			for (k = 0; k < width; k++)
+			{
+				d[i][k] = 0;
+			}
+			return (d);
+		}
+	}
 }
