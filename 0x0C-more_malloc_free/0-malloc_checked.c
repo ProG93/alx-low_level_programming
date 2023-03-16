@@ -1,11 +1,9 @@
-#include <stdio.h>
 #include "main.h"
-#include <stdlib.h>
 
 /**
 * malloc_checked - allocated memory
 * @b: integer to memory
-* Return: nothing
+* Return: void
 */
 
 void *malloc_checked(unsigned int b)
